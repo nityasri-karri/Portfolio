@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator without DOM & Objects</title>
+    <style>
+      body {
+        background-color: aliceblue;
+        font-family: Arial;
+        text-align: center;
+        margin-top: 100px;
+      }
+      .box {
+        width: 300px;
+        margin: auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        font-size: 22px;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="'box">
+      <h1>Calculator Without DOM & Objects</h1>
+      <script>
+        let num1 = Number(prompt("Enter the first number:")); //if we can not take Number at first it will do string concatinaton so the + operator wont work so we should complousry put parseFloat or Number.
+        let operation = prompt("Enter the operation(+,-,*,/):");
+        let num2 = Number(prompt("Enter the second number:"));
+
+        let result;
+        if (operation == "+") {
+          result = num1 + num2;
+        } else if (operation == "-") {
+          result = num1 - num2;
+        } else if (operation == "*") {
+          result = num1 * num2;
+        } else if (operation == "/") {
+          result = num1 / num2;
+        } else {
+          result = "Invalid Operations";
+        }
+        document.write("<p>Result:" + result + "</p>");
+      </script>
+    </div>
+  </body>
+  <div class="box">
+    <h1>BMI without DOM & and Objects</h1>
+    <script>
+      let number1 = Number(prompt("Enter your Weight(kg):"));
+      let number2 = Number(prompt("Enter your Height(m):"));
+
+      let bmi = number1 / (number2 * number2);
+      document.write("<p>Result:" + bmi + "</p>");
+    </script>
+  </div>
+</html>
